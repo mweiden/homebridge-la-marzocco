@@ -62,6 +62,13 @@ node scripts/lm_manual_test.js --power off
 The script stores the installation key in `installation_key.json` by default and
 will auto-register it on first run. Override the location with `LM_KEY_PATH`.
 
+## Tests
+Run unit tests with:
+
+```bash
+npm test
+```
+
 ## Acknowledgements
 
 Full props to @zweckj for figuring out the LM API. The client code here is based on https://github.com/zweckj/pylamarzocco.

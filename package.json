@@ -11,6 +11,9 @@
     "lamarzocco",
     "espresso"
   ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
   "engines": {
     "node": ">=18.0.0",
     "homebridge": "^1.8.0 || ^2.0.0-beta.0"
