@@ -1,7 +1,7 @@
 # Homebridge plugin for La Marzocco
 [![Tests](https://github.com/mweiden/lm-homebridge/actions/workflows/tests.yml/badge.svg)](https://github.com/mweiden/lm-homebridge/actions/workflows/tests.yml)
 
-[Homebridge](https://homebridge.io/) plugin for La Marzocco espresso machines. Enables turning your espresso machine on and off with [Apple HomeKit](https://en.wikipedia.org/wiki/Apple_Home).
+[Homebridge](https://homebridge.io/) plugin for La Marzocco espresso machines. Enables turning your La Marzocco IoT-enabled espresso machine (i.e. a Linea Micra or Linea Mini) on and off with [Apple HomeKit](https://en.wikipedia.org/wiki/Apple_Home).
 
 <img height="600" alt="IMG_2168" src="https://github.com/user-attachments/assets/b8f2e146-a8cb-42f2-9bc0-d658649d067d" />
 
