@@ -1,0 +1,42 @@
+{
+  "pluginAlias": "LaMarzoccoSwitch",
+  "pluginType": "accessory",
+  "singular": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Accessory Name",
+        "type": "string",
+        "default": "La Marzocco"
+      },
+      "serial": {
+        "title": "Machine Serial Number",
+        "type": "string"
+      },
+      "username": {
+        "title": "LM Cloud Username",
+        "type": "string"
+      },
+      "password": {
+        "title": "LM Cloud Password",
+        "type": "string"
+      },
+      "installationKeyPath": {
+        "title": "Installation Key Path",
+        "type": "string"
+      },
+      "pollIntervalSeconds": {
+        "title": "Polling Interval (seconds)",
+        "type": "integer",
+        "default": 30,
+        "minimum": 0
+      }
+    },
+    "required": [
+      "serial",
+      "username",
+      "password"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+# Node
+node_modules/
+
+# Env/config
+.env
+.env.*
+
+# LM local key material
+installation_key.json
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store

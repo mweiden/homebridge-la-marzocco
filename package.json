@@ -1,0 +1,30 @@
+{
+  "name": "homebridge-lm-homebridge",
+  "version": "0.1.0",
+  "description": "Homebridge integration for La Marzocco espresso machines",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge",
+    "lamarzocco",
+    "espresso"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "homebridge": ">=1.6.0"
+  },
+  "author": "",
+  "files": [
+    "src",
+    "lib",
+    "config.schema.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "homebridge": {
+    "accessories": [
+      "LaMarzoccoSwitch"
+    ]
+  }
+}
