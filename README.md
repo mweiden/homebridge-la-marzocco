@@ -4,8 +4,11 @@ Homebridge integration for La Marzocco espresso machines.
 
 ## Homebridge plugin
 ### Install (local)
+
+Using the `homebridge` terminal copy the repo into your machine and
+
 ```bash
-npm install -g /Users/mattweiden/code/lm-homebridge
+npm install --prefix /var/lib/homebridge <path_to_homebridge_repo> 
 ```
 
 ### Configure
