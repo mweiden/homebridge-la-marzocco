@@ -1,10 +1,11 @@
-# Homebridge plugin for La Marzocco espresso machines
+# Homebridge plugin for La Marzocco
 [![Tests](https://github.com/mweiden/lm-homebridge/actions/workflows/tests.yml/badge.svg)](https://github.com/mweiden/lm-homebridge/actions/workflows/tests.yml)
 
-Homebridge integration for La Marzocco espresso machines.
+[Homebridge](https://homebridge.io/) plugin for La Marzocco espresso machines. Enables turning your espresso machine on and off with [Apple HomeKit](https://en.wikipedia.org/wiki/Apple_Home).
 
-## Homebridge plugin
-### Install (development mode)
+<img height="600" alt="IMG_2168" src="https://github.com/user-attachments/assets/b8f2e146-a8cb-42f2-9bc0-d658649d067d" />
+
+## Install (development mode)
 
 Using the `homebridge` terminal copy the repo into your machine and
 
@@ -14,7 +15,7 @@ npm install --prefix /var/lib/homebridge <path_to_homebridge_repo>
 
 You will then have to put homebridge into Debug mode and restart homebridge.
 
-### Configure
+## Configure
 Add the platform in your Homebridge `config.json`:
 
 ```json
@@ -36,14 +37,22 @@ The plugin stores the installation key under the Homebridge storage path by
 default. Override with `installationKeyPath` if needed. Set
 `pollIntervalSeconds` to `0` to disable polling.
 
-## Manual integration test
-This repo includes a Node.js script that exercises the LM cloud API flow using
-the local client library.
+## Development
 
 ### Prerequisites
 - Node.js 18+ (for built-in `fetch` and crypto support).
 
-### Run
+### Unit Tests
+Run unit tests with:
+
+```bash
+npm test
+```
+
+### Manual integration test
+This repo includes a Node.js script that exercises the LM cloud API flow using
+the local client library.
+
 Set environment variables and run the script:
 
 ```bash
@@ -62,13 +71,6 @@ node scripts/lm_manual_test.js --power off
 
 The script stores the installation key in `installation_key.json` by default and
 will auto-register it on first run. Override the location with `LM_KEY_PATH`.
-
-## Tests
-Run unit tests with:
-
-```bash
-npm test
-```
 
 ## Acknowledgements
 
