@@ -2,9 +2,6 @@
 
 process.env.NODE_ENV = "test";
 
-const test = require("node:test");
-const assert = require("node:assert/strict");
-
 const {
   generateInstallationKey,
   extractPowerFromDashboard,
@@ -13,27 +10,27 @@ const {
 
 test("generateInstallationKey returns base64 key material", () => {
   const key = generateInstallationKey("test-installation-id");
-  assert.equal(key.installation_id, "test-installation-id");
+  expect(key.installation_id).toBe("test-installation-id");
 
   const secret = Buffer.from(key.secret, "base64");
-  assert.equal(secret.length, 32);
+  expect(secret.length).toBe(32);
 
   const privateKey = Buffer.from(key.private_key, "base64");
-  assert.ok(privateKey.length > 0);
+  expect(privateKey.length).toBeGreaterThan(0);
 });
 
 test("parseInstallationKey rejects invalid payloads", () => {
-  assert.throws(() => _test.parseInstallationKey(null));
-  assert.throws(() => _test.parseInstallationKey({}));
-  assert.throws(() => _test.parseInstallationKey({ installation_id: "x" }));
+  expect(() => _test.parseInstallationKey(null)).toThrow();
+  expect(() => _test.parseInstallationKey({})).toThrow();
+  expect(() => _test.parseInstallationKey({ installation_id: "x" })).toThrow();
 });
 
 test("parseInstallationKey returns secret buffer", () => {
   const key = generateInstallationKey("parse-test");
   const parsed = _test.parseInstallationKey(key);
-  assert.ok(Buffer.isBuffer(parsed.secret));
-  assert.equal(parsed.secret.length, 32);
-  assert.equal(parsed.installation_id, "parse-test");
+  expect(Buffer.isBuffer(parsed.secret)).toBe(true);
+  expect(parsed.secret.length).toBe(32);
+  expect(parsed.installation_id).toBe("parse-test");
 });
 
 test("generateRequestProof is deterministic", () => {
@@ -42,7 +39,7 @@ test("generateRequestProof is deterministic", () => {
     "installation.nonce.timestamp",
     secret
   );
-  assert.equal(proof, "eX0MVKqbkc9tIyJFv+Q9gMELTaRzCFTepXSz9+yIJBw=");
+  expect(proof).toBe("eX0MVKqbkc9tIyJFv+Q9gMELTaRzCFTepXSz9+yIJBw=");
 });
 
 test("extractPowerFromDashboard returns false for standby", () => {
@@ -54,7 +51,7 @@ test("extractPowerFromDashboard returns false for standby", () => {
       },
     ],
   };
-  assert.equal(extractPowerFromDashboard(dashboard), false);
+  expect(extractPowerFromDashboard(dashboard)).toBe(false);
 });
 
 test("extractPowerFromDashboard returns true for brewing", () => {
@@ -66,10 +63,10 @@ test("extractPowerFromDashboard returns true for brewing", () => {
       },
     ],
   };
-  assert.equal(extractPowerFromDashboard(dashboard), true);
+  expect(extractPowerFromDashboard(dashboard)).toBe(true);
 });
 
 test("extractPowerFromDashboard returns null for missing widgets", () => {
-  assert.equal(extractPowerFromDashboard({}), null);
-  assert.equal(extractPowerFromDashboard({ widgets: [] }), null);
+  expect(extractPowerFromDashboard({})).toBeNull();
+  expect(extractPowerFromDashboard({ widgets: [] })).toBeNull();
 });

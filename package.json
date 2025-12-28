@@ -30,5 +30,8 @@
     "platforms": [
       "LaMarzocco"
     ]
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
   }
 }
