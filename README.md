@@ -47,7 +47,7 @@ You will then have to put homebridge into Debug mode and restart homebridge.
 Run unit tests with:
 
 ```bash
-npm test
+npx jest
 ```
 
 ### Manual integration test
