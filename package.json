@@ -12,7 +12,7 @@
     "espresso"
   ],
   "scripts": {
-    "test": "NODE_ENV=test node --test test/*.test.js"
+    "test": "NODE_ENV=test npx jest --coverage test/*.test.js"
   },
   "engines": {
     "node": ">=18.0.0",
