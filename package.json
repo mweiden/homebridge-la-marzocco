@@ -2,6 +2,10 @@
   "name": "homebridge-la-marzocco",
   "version": "0.1.1",
   "description": "Homebridge integration for La Marzocco espresso machines",
+  "homepage": "https://github.com/mweiden/homebridge-la-marzocco",
+  "bugs": {
+    "url": "https://github.com/mweiden/homebridge-la-marzocco/issues"
+  },
   "displayName": "La Marzocco",
   "main": "src/index.js",
   "license": "MIT",
