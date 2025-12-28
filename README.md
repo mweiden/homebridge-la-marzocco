@@ -7,7 +7,7 @@
 <img height="600" alt="IMG_2168" src="https://github.com/user-attachments/assets/b8f2e146-a8cb-42f2-9bc0-d658649d067d" />
 
 ## Configure
-Add the platform in your Homebridge `config.json`:
+Add the platform in your Homebridge `config.json` or use the Plugin Config UI:
 
 ```json
 {
@@ -24,9 +24,10 @@ Add the platform in your Homebridge `config.json`:
 }
 ```
 
-The plugin stores the installation key under the Homebridge storage path by
-default. Override with `installationKeyPath` if needed. Set
-`pollIntervalSeconds` to `0` to disable polling.
+<img width="600" alt="Screenshot 2025-12-27 at 11 07 04 PM" src="https://github.com/user-attachments/assets/04494290-c1d2-46b0-836d-a998b33f06bd" />
+
+
+Set `pollIntervalSeconds` to `0` to disable polling.
 
 ## Development
 
