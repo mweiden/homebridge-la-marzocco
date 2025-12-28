@@ -6,16 +6,6 @@
 
 <img height="600" alt="IMG_2168" src="https://github.com/user-attachments/assets/b8f2e146-a8cb-42f2-9bc0-d658649d067d" />
 
-## Install (development mode)
-
-Using the `homebridge` terminal copy the repo into your machine and
-
-```bash
-npm install --prefix /var/lib/homebridge <path_to_homebridge_repo> 
-```
-
-You will then have to put homebridge into Debug mode and restart homebridge.
-
 ## Configure
 Add the platform in your Homebridge `config.json`:
 
@@ -39,6 +29,16 @@ default. Override with `installationKeyPath` if needed. Set
 `pollIntervalSeconds` to `0` to disable polling.
 
 ## Development
+
+### Install for development
+
+Using the `homebridge` terminal copy the repo into your machine and
+
+```bash
+npm install --prefix /var/lib/homebridge <path_to_homebridge_repo> 
+```
+
+You will then have to put homebridge into Debug mode and restart homebridge.
 
 ### Prerequisites
 - Node.js 18+ (for built-in `fetch` and crypto support).
