@@ -7,6 +7,13 @@
 
 <img height="600" alt="IMG_2168" src="https://github.com/user-attachments/assets/b8f2e146-a8cb-42f2-9bc0-d658649d067d" />
 
+## Installation
+
+`homebridge-la-marzocco` is now a [HomeBridge verified plugin](https://github.com/homebridge/plugins/issues/913) 🎉. So all you have to do is search for the plugin on the homebridge UI and install it.
+
+<img width="600" alt="Screenshot 2026-01-05 at 10 26 44 PM" src="https://github.com/user-attachments/assets/5f275f15-8f5f-4e3c-9e4e-6b7c732773f1" />
+
+
 ## Configure
 Add the platform in your Homebridge `config.json` or use the Plugin Config UI:
 
